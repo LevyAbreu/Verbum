@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LangTips - Idiomas</title>
+        <link rel="icon" type="image/png" href="../assets/icons/icon.png" />
+        <link rel="stylesheet" href="../css/lang.css">
+        <link rel="stylesheet" href="../css/all.css">
+        <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <button class="hamburger" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="container">
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="../assets/icons/icon.png" alt="Ícone" />
+                    <h2>Verbum</h2>
+                </div>
+                <ul class="menu">
+                    <li class="menu-item"><a href="../home.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li class="menu-item active"><a href="language.html"><i class="fas fa-language"></i>Idiomas</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="modules.html"><i class="fas fa-graduation-cap"></i>Módulos</a>
+                        <ul class="submenu">
+                            <li><a href="#">Apresentações</a></li>
+                            <li><a href="#">Direções</a></li>
+                            <li><a href="#">Emergência</a></li>
+                            <li><a href="#">Restaurante</a></li>
+                            <li><a href="#">Transporte</a></li>
+                            <li><a href="#">Compras</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="progress.html"><i class="fas fa-chart-line"></i>Progresso</a></li>
+                    <li class="menu-item"><a href="profile.html"><i class="fas fa-user"></i>Perfil</a></li>
+                    <li class="menu-item separator dropdown">
+                        <a href="#"><i class="fas fa-ellipsis-v"></i>More</a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="fa-solid fa-gear"></i>Configurações</a></li>
+                            <li><a href="#"><i class="fa-solid fa-database"></i>Dados da Conta</a></li>
+                            <li><a href="#"><i class="fa-solid fa-circle-info"></i>Sobre</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <div class="topbar">
+                    <div class="searchbar">
+                        <input type="text" id="searchInput" placeholder="Buscar idioma..." />
+                    </div>
+                    <div class="user-profile">
+                      <img src="https://img.icons8.com/?size=100&id=fUUEbUbXhzOA&format=png&color=000000" alt="Avatar" />
+                        <span>User</span>
+                        <div class="dropdown-menu">
+                            <a href="#"><i class="fa-solid fa-gear"></i>Configurações</a>
+                            <a href="#"><i class="fa-solid fa-door-open"></i>Sair</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-panel">
+                    <div class="header-section">
+                        <h2 class="language-title">Escolha seu idioma</h2>
+                        <p class="subtitle">Selecione um idioma para começar ou continuar sua jornada de aprendizado</p>
+                    </div>
+
+                    <!-- Filtros -->
+                    <div class="filters-section">
+                        <div class="filter-group">
+                            <label for="levelFilter">Filtrar por nível:</label>
+                            <select id="levelFilter">
+                                <option value="all">Todos os níveis</option>
+                                <option value="iniciante">Iniciante</option>
+                                <option value="intermediario">Intermediário</option>
+                                <option value="avancado">Avançado</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="regionFilter">Filtrar por região:</label>
+                            <select id="regionFilter">
+                                <option value="all">Todas as regiões</option>
+                                <option value="europa">Europa</option>
+                                <option value="asia">Ásia</option>
+                                <option value="americas">Américas</option>
+                                <option value="africa">África</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Grid de idiomas -->
+                    <div class="language-list" id="languageList">
+                        <!-- Inglês -->
+                        <div class="language-card" data-level="intermediario" data-region="americas">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/us.png" alt="Bandeira dos EUA" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Inglês</h3>
+                                <p class="language-description">Idioma global para negócios e comunicação internacional</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge intermediario">Intermediário</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%"></div>
+                                    </div>
+                                    <span class="progress-text">65%</span>
+                                </div>
+                                <button class="action-btn continue">
+                                    <i class="fas fa-play"></i>
+                                    Continuar aprendendo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Espanhol -->
+                        <div class="language-card" data-level="iniciante" data-region="americas">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/es.png" alt="Bandeira da Espanha" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Espanhol</h3>
+                                <p class="language-description">Segunda língua mais falada no mundo, essencial para as Américas</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge iniciante">Iniciante</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 40%"></div>
+                                    </div>
+                                    <span class="progress-text">40%</span>
+                                </div>
+                                <button class="action-btn continue">
+                                    <i class="fas fa-play"></i>
+                                    Continuar aprendendo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Francês -->
+                        <div class="language-card" data-level="iniciante" data-region="europa">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/fr.png" alt="Bandeira da França" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Francês</h3>
+                                <p class="language-description">Língua da diplomacia e cultura, falada em 5 continentes</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge iniciante">Iniciante</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 25%"></div>
+                                    </div>
+                                    <span class="progress-text">25%</span>
+                                </div>
+                                <button class="action-btn continue">
+                                    <i class="fas fa-play"></i>
+                                    Continuar aprendendo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Alemão -->
+                        <div class="language-card" data-level="iniciante" data-region="europa">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/de.png" alt="Bandeira da Alemanha" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Alemão</h3>
+                                <p class="language-description">Língua da engenharia e inovação, importante na Europa</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge iniciante">Iniciante</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0%</span>
+                                </div>
+                                <button class="action-btn start">
+                                    <i class="fas fa-rocket"></i>
+                                    Começar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Italiano -->
+                        <div class="language-card" data-level="iniciante" data-region="europa">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/it.png" alt="Bandeira da Itália" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Italiano</h3>
+                                <p class="language-description">Língua da arte, culinária e design, berço do Renascimento</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge iniciante">Iniciante</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0%</span>
+                                </div>
+                                <button class="action-btn start">
+                                    <i class="fas fa-rocket"></i>
+                                    Começar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Japonês -->
+                        <div class="language-card" data-level="iniciante" data-region="asia">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/jp.png" alt="Bandeira do Japão" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Japonês</h3>
+                                <p class="language-description">Língua da tecnologia e tradição, portal para a cultura japonesa</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge iniciante">Iniciante</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0%</span>
+                                </div>
+                                <button class="action-btn start">
+                                    <i class="fas fa-rocket"></i>
+                                    Começar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Coreano -->
+                        <div class="language-card" data-level="iniciante" data-region="asia">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/kr.png" alt="Bandeira da Coreia do Sul" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Coreano</h3>
+                                <p class="language-description">Língua em ascensão global, K-pop, K-drama e tecnologia</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge iniciante">Iniciante</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0%</span>
+                                </div>
+                                <button class="action-btn start">
+                                    <i class="fas fa-rocket"></i>
+                                    Começar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Mandarim -->
+                        <div class="language-card" data-level="iniciante" data-region="asia">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/cn.png" alt="Bandeira da China" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Mandarim</h3>
+                                <p class="language-description">Idioma mais falado do mundo, chave para o mercado chinês</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge iniciante">Iniciante</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0%</span>
+                                </div>
+                                <button class="action-btn start">
+                                    <i class="fas fa-rocket"></i>
+                                    Começar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Árabe -->
+                        <div class="language-card" data-level="iniciante" data-region="africa">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/sa.png" alt="Bandeira da Arábia Saudita" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Árabe</h3>
+                                <p class="language-description">Língua clássica e moderna, falada por mais de 400 milhões</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge iniciante">Iniciante</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0%</span>
+                                </div>
+                                <button class="action-btn start">
+                                    <i class="fas fa-rocket"></i>
+                                    Começar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Russo -->
+                        <div class="language-card" data-level="iniciante" data-region="europa">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/ru.png" alt="Bandeira da Rússia" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Russo</h3>
+                                <p class="language-description">Língua eslava mais falada, importante na Europa Oriental</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge iniciante">Iniciante</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0%</span>
+                                </div>
+                                <button class="action-btn start">
+                                    <i class="fas fa-rocket"></i>
+                                    Começar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Português -->
+                        <div class="language-card" data-level="avancado" data-region="americas">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w80/br.png" alt="Bandeira do Brasil" class="flag-image">
+                            </div>
+                            <div class="language-info">
+                                <h3 class="language-name">Português</h3>
+                                <p class="language-description">Sua língua nativa - explore variações e aperfeiçoamento</p>
+                                <div class="level-indicator">
+                                    <span class="level-badge avancado">Avançado</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 95%"></div>
+                                    </div>
+                                    <span class="progress-text">95%</span>
+                                </div>
+                                <button class="action-btn continue">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Aperfeiçoar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </div>
+
+        <script src="../js/simu_data.js"></script>
+    </body>
+</html>
+

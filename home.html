@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verbum - Home</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../assets/icons/icon.png" alt="Ícone" />
+                <h2>Verbum</h2>
+            </div>
+            <ul class="menu">
+                <li class="menu-item active"><a href="../home.html"><i class="fas fa-home"></i>Home</a></li>
+                <li class="menu-item dropdown">
+                    <a href="pages/language.html"><i class="fas fa-language"></i>Idiomas</a>
+                    <ul class="submenu">
+                        <li><a href="#">Inglês</a></li>
+                        <li><a href="#">Espanhol</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item dropdown">
+                    <a href="pages/modules.html"><i class="fas fa-graduation-cap"></i>Módulos</a>
+                    <ul class="submenu">
+                        <li><a href="#">Apresentações</a></li>
+                        <li><a href="#">Direções</a></li>
+                        <li><a href="#">Emergência</a></li>
+                        <li><a href="#">Restaurante</a></li>
+                        <li><a href="#">Transporte</a></li>
+                        <li><a href="#">Compras</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="pages/progress.html"><i class="fas fa-chart-line"></i>Progresso</a></li>
+                <li class="menu-item"><a href="pages/profile.html"><i class="fas fa-user"></i>Perfil</a></li>
+                <li class="menu-item separator dropdown">
+                    <a href="#"><i class="fas fa-ellipsis-v"></i>More</a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fa-solid fa-gear"></i>Configurações</a></li>
+                        <li><a href="#"><i class="fa-solid fa-database"></i>Dados da Conta</a></li>
+                        <li><a href="#"><i class="fa-solid fa-circle-info"></i>Sobre</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="topbar">
+                <div class="searchbar">
+                    <input type="text" placeholder="Buscar..." />
+                </div>
+                <div class="user-profile">
+                  <img src="https://img.icons8.com/?size=100&id=fUUEbUbXhzOA&format=png&color=000000" alt="Avatar" />
+                    <span>User</span>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fa-solid fa-gear"></i>Configurações</a>
+                        <a href="#"><i class="fa-solid fa-door-open"></i>Sair</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hero-container">
+              <div class="hero-slide active">
+                <h1>Bem-vindo ao LangTips</h1>
+                <p>Aprenda idiomas de forma prática e interativa.</p>
+              </div>
+              <div class="hero-slide">
+                <h1>Escolha seu idioma</h1>
+                <p>Explore diferentes línguas com conteúdo personalizado.</p>
+              </div>
+              <div class="hero-slide">
+                <h1>Avance no seu ritmo</h1>
+                <p>Estude no seu tempo, com metas que cabem na sua rotina.</p>
+              </div>
+            
+              <button id="hero-prev" class="hero-nav">⟨</button>
+              <button id="hero-next" class="hero-nav">⟩</button>
+            </div>
+            
+            
+            <div class="slides-wrapper">
+                <!-- Tela 1: Bem-vindo com botão Começar -->
+                <div class="home-panel" id="tela-inicio">
+                    <div class="hero">
+                        <div class="text">
+                            <h2>Bem-vindo(a), Victor!</h2>
+                            <p>Sua presença é muito importante para nós. Que tal dar início ao seu aprendizado hoje?</p>
+                            <div class="btn-action" id="btn-comecar">→ Começar</div>
+                        </div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+              
+                <!-- Tela 2: Escolha de Idioma -->
+                <div class="home-panel" id="tela-idioma">
+                    <div class="idioma">
+                        <div class="text">
+                            <h2>Como começar?</h2>
+                            <div class="btn-action" id="btn-escolher-idioma">Escolher Idioma</div>
+                            <ul class="submenu idioma-lista" id="lista-idiomas">
+                                <li data-idioma="Inglês">Inglês</li>
+                                <li data-idioma="Espanhol">Espanhol</li>
+                            </ul>
+                        </div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+              
+                <!-- Tela 3: Escolha de Módulo -->
+                <div class="home-panel" id="tela-modulo">
+                    <div class="modulos">
+                        <div class="text">
+                            <h2>Escolha um módulo</h2>
+                            <div class="btn-action" id="btn-selecionar-modulo">Selecionar Módulo</div>
+                            <ul class="submenu modulo-lista" id="lista-modulos">
+                                <li data-modulo="Apresentações">Apresentações</li>
+                                <li data-modulo="Direções">Direções</li>
+                                <li data-modulo="Emergência">Emergência</li>
+                                <li data-modulo="Restaurante">Restaurante</li>
+                                <li data-modulo="Transporte">Transporte</li>
+                                <li data-modulo="Compras">Compras</li>
+                            </ul>
+                        </div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+              
+                <!-- Tela 4: Exercício de Fixação -->
+                <div class="home-panel" id="tela-exercicio">
+                    <div class="exercicio">
+                        <div class="text">
+                            <h2>Ao final do módulo, realize um exercício de fixação</h2>
+                            <div class="btn-action" id="btn-avancar">Continuar</div>
+                        </div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+              
+                <!-- Tela 5: Conclusão -->
+                <div class="home-panel" id="tela-conclusao">
+                    <div class="conclusao">
+                        <div class="text">
+                            <h2>Tã-dã, você acaba de aprender algo novo!</h2>
+                            <p>Parabéns por completar este módulo!</p>
+                        </div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/home.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+:root {
+    --background-site: #FAFAFA;
+    --background-menu : #FFF;
+    --background-submenu : #fafafa;
+    --text_menu: #00ACC1;
+    --ciano-dark: #0097A7;
+    --text-dark: #2C3E50;
+    --text-muted: #7F8C8D;
+    --press: #0093a71e;
+}
+
+/* Content */
+
+.panel {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.panel h3 {
+    margin-bottom: 20px;
+    color: #00bcd4;
+}
+
+.card {
+    background-color: #00bcd4;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.data-table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.data-table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.data-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.status-assigned {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.status-canceled {
+    color: #f44336;
+    font-weight: bold;
+}

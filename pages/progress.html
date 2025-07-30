@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LangTips - Progress</title>
+  <link rel="icon" type="image/png" href="../assets/icons/icon.png" />
+  <link rel="stylesheet" href="../css/progress.css">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+          <img src="../assets/icons/icon.png" alt="Ícone" />
+          <h2>Verbum</h2>
+      </div>
+      <ul class="menu">
+          <li class="menu-item"><a href="../home.html"><i class="fas fa-home"></i>Home</a></li>
+          <li class="menu-item dropdown">
+              <a href="language.html"><i class="fas fa-language"></i>Idiomas</a>
+              <ul class="submenu">
+                  <li><a href="#">Inglês</a></li>
+                  <li><a href="#">Espanhol</a></li>
+              </ul>
+          </li>
+          <li class="menu-item dropdown">
+              <a href="modules.html"><i class="fas fa-graduation-cap"></i>Módulos</a>
+              <ul class="submenu">
+                  <li><a href="#">Apresentações</a></li>
+                  <li><a href="#">Direções</a></li>
+                  <li><a href="#">Emergência</a></li>
+                  <li><a href="#">Restaurante</a></li>
+                  <li><a href="#">Transporte</a></li>
+                  <li><a href="#">Compras</a></li>
+              </ul>
+          </li>
+          <li class="menu-item active"><a href="progress.html"><i class="fas fa-chart-line"></i>Progresso</a></li>
+          <li class="menu-item"><a href="profile.html"><i class="fas fa-user"></i>Perfil</a></li>
+          <li class="menu-item separator dropdown">
+              <a href="#"><i class="fas fa-ellipsis-v"></i>More</a>
+              <ul class="submenu">
+                  <li><a href="#"><i class="fa-solid fa-gear"></i>Configurações</a></li>
+                  <li><a href="#"><i class="fa-solid fa-database"></i>Dados da Conta</a></li>
+                  <li><a href="#"><i class="fa-solid fa-circle-info"></i>Sobre</a></li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="topbar">
+          <div class="searchbar">
+              <input type="text" placeholder="Buscar..." />
+          </div>
+          <div class="user-profile">
+            <img src="https://img.icons8.com/?size=100&id=fUUEbUbXhzOA&format=png&color=000000" alt="Avatar" />
+              <span>User</span>
+              <div class="dropdown-menu">
+                  <a href="#"><i class="fa-solid fa-gear"></i>Configurações</a>
+                  <a href="#"><i class="fa-solid fa-door-open"></i>Sair</a>
+              </div>
+          </div>
+      </div>
+      <div class="panel">
+        <h3>Próximos Módulos</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Status</th>
+              <th>Hora</th>
+              <th>Módulo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>27/07/2025</td>
+              <td class="status-assigned">Liberado</td>
+              <td>10:00</td>
+              <td>Restaurante</td>
+            </tr>
+            <tr>
+              <td>30/07/2025</td>
+              <td class="status-assigned">Liberado</td>
+              <td>14:00</td>
+              <td>Transporte</td>
+            </tr>
+            <tr>
+              <td>02/08/2025</td>
+              <td class="status-canceled">Pendente</td>
+              <td>08:30</td>
+              <td>Emergência</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
